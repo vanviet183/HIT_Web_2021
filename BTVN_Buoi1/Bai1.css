@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 'Roboto';
+}
+
+#main {
+  margin: 8px;
+}
+
+h1 {
+  color: #ff0000;
+  padding: 24px 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+table {
+  width: 100%;
+}
+
+.border {
+  border: 1px solid #000;
+}
+
+p {
+  padding: 16px 0;
+}
+
+div {
+  margin-bottom: 16px;
+}
+
+span {
+  font-style: italic;
+}
+

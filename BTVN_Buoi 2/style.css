@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+  background: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400/f7093b86128681.5d909dad4f487.jpg') fixed no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.interface {
+  width: 375px;
+  margin: auto;
+  margin-top: 75px;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px #382ae1;
+}
+
+.interface img {
+  height: 200px;
+  width: 100%;
+  height: ;
+  object-fit: cover;
+}
+
+.content {
+  padding: 28px;
+  text-align: center;
+}
+
+.box {
+  display: flex;
+  background: #f8f9fd;
+  padding: 16px;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.title {
+  font-size: 28px;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.descript {
+  font-size: 17px;
+  color: #aeb1b6;
+  margin-bottom: 24px;
+}
+
+.fas {
+  color: #717fa6;
+  padding: 16px;
+  background: #dfe6fb;
+  border-radius: 50%;
+}
+
+.info {
+  text-align: start;
+  margin-left: 24px;
+  font-size: 18px;
+  line-height: 1.5;
+  flex: 1;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+.price {
+  color: #b28ea7;
+}
+
+.change {
+  font-weight: 600;
+  padding: 0 8px;
+  text-decoration: none;
+}
+
+.change:hover {
+  opacity: 0.6;
+}
+
+.btn-payment {
+  width: 100%;
+  padding: 16px 0;
+  border-radius: 15px;
+  border: none;
+  color: #fff;
+  background: #392add;
+  font-size: 16px;
+  margin-top: 24px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px #3829e059;
+}
+
+.btn-payment:hover {
+  opacity: 0.8;
+}
+
+.paragraph {
+  color: #a1a2b2;
+  font-size: 16px;
+  margin-top: 24px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.paragraph:hover {
+  cursor: pointer;
+  color: #333;
+}
