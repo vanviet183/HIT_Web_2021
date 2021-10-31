@@ -1,0 +1,68 @@
+body {
+  background: url('https://cdn.pixabay.com/photo/2018/12/18/22/30/background-3883188_1280.jpg') fixed no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.box {
+  width: 35px;
+  height: 35px;
+  background: rgb(223, 223, 10);
+}
+
+.box:hover {
+  background: darkblue;
+  cursor: pointer;
+}
+
+.h {
+  display: flex;
+}
+
+.h2 {
+  display: flex;
+  align-items: center;
+}
+
+.hit {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  grid-gap: 2rem;
+  height: 100vh;
+}
+
+.t1 {
+  display: flex;
+}
+
+.t2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box2-1 {
+  display: flex;
+}
+
+.box2-item-1 {
+  display: flex;
+}
+
+.box2-item-3 {
+  display: flex;
+}
+
+.box2-item-5 {
+  display: flex;
+}
+
+.border-t-r-radius {
+  border-top-right-radius: 15px;
+}
+
+.border-t-l-radius {
+  border-top-left-radius: 15px;
+}
