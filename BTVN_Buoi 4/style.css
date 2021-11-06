@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Baloo Tamma 2', cursive;
+}
+
+body {
+  background: #4b4c4e;
+}
+
+#main {
+  color: #fff;
+  margin-top: 50px;
+}
+
+.container {
+  
+}
+
+p.title {
+  font-size: 36px;
+}
+
+p.date {
+  font-size: 24px;
+  color: red;
+}
+
+.time {
+  font-size: 18px;
+
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.border-right {
+  border-right: 1px solid rgb(240, 232, 232);
+}
+
+.border-bottom {
+  border-bottom: 1px solid rgb(240, 232, 232);
+  margin-bottom: 16px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .box-item {
+    padding-bottom: 32px;
+  }
+
+  .border-sm-bottom {
+    border-bottom: 1px solid rgb(240, 232, 232);
+    margin-bottom: 16px;
+  }
+
+  .border-sm-none {
+    border-right: none;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 900px){
+  .border-md-none {
+    border: none;
+  }
+
+  .box-item {
+    padding-bottom: 32px;
+  }
+
+  .border-md-bottom {
+    border-bottom: 1px solid rgb(240, 232, 232);
+    margin-bottom: 16px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 1024px) {
+  .box-item {
+    height: 150px;
+  }
+}
