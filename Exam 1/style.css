@@ -60,12 +60,23 @@ p {
 .box-item:hover {
   background-color: #66FF66;
   font-size: 18px;
+  transition: all 0.2s linear;
+}
+
+.box-item:hover img {
   transform: scale(1.2);
   transition: all 0.2s linear;
+  
+}
+
+.h-box {
+  height: 180px;
+  overflow: hidden;
 }
 
 .box-item img {
   width: 100%;
+
 }
 
 .sub-nav-price {
@@ -95,7 +106,6 @@ p {
 
 .color-section {
   color: #330066 ;
-  gap: 1rem;
 }
 
 .title {
@@ -107,7 +117,6 @@ p {
   display: flex;
   align-items: start;
   flex-direction: column;
-  margin-right: 1rem;
 }
 
 .t-box {
@@ -127,4 +136,8 @@ p {
   width: 30px;
   height: 30px;
   border-radius: 50%;
+}
+
+.box-right-1 img {
+  width: 100%;
 }
