@@ -22,78 +22,47 @@ const menu = [
   "4. Cập nhật thông tin ngưỜi dùng theo id",
 ]
 
-function showUsers() {
-  users.forEach(e => {
-    console.log(e);
+const showUsers = (users) => console.log(users);
+
+const user = {
+  id: 5,
+  name: "Van Viet",
+  age: 19,
+  gender: "male",
+  money: 100,
+};
+
+const addUsers = (user) => users.push(user);
+
+const deleteUsers = (userId) => {
+  return users.filter((user) => user.id !== userId);
+}
+// filter return element true
+
+const updateUsers = (userId, body) => {
+  return users.map((user) => 
+    user.id === userId ? {...user, ...body} : user)
+}
+// ...user: rest paramaters
+
+const statUsers = (users) => {
+  const stat = {male: 0, teen: 0};
+  users.forEach((user) => {
+    if(user.gender === 'male') 
+      ++stat.male;
+    if(user.age > 15)
+      ++stat.teen;
   })
+  return stat;
 }
 
-function addUsers(idAdd, nameAdd, ageAdd, genderAdd, moneyAdd) {
-  users.push({ id: idAdd, name: nameAdd, age: ageAdd, gender: genderAdd, money: moneyAdd });
-  console.log('Add success');
+const totalMoney = (users) => {
+  return users.reduce((acc, {id, money}) => 
+    (id % 2 === 0 ? acc + money : acc), 0
+  ) 
 }
 
-function delUsers(id) {
-  let cnt = 0;
-  users.forEach((e, index) => {
-    if(e.id === id) {
-      cnt++;
-      users.splice(index, 1)
-    } 
-  })
-  if(cnt > 0) {
-    console.log('Delete user success')
-  } else {
-    console.log('id does not exist!')
-  }
-}
-
-function updateUsers(id) {
-  let cnt = 0;
-  users.forEach((e, index) => {
-    if(e.id === id) {
-      cnt++;
-      e = { id: 5, name: "Van Viet", age: 19, gender: "male", money: 100 }
-    }
-  })
-  if(cnt > 0) {
-    console.log('Update user success')
-  } else {
-    console.log('id does not exist!')
-  }
-}
-
-function cntMale() {
-  let cnt = 0;
-  users.forEach(e => {
-    if(e.gender === 'male') {
-      cnt++;
-    }
-  })
-  return cnt;
-}
-
-function moreThan15Age() {
-  let cnt = 0;
-  users.forEach((e, index) => {
-    if(e.age > 15) {
-      cnt++;
-    }
-  })
-  return cnt;
-}
-
-function sumMoney() {
-  let total = 0;
-  users.forEach(e => {
-    if(e.id % 2 === 0) {
-      total += e.money;
-    }
-  })
-  return total;
-}
-
-// let sum = users.reduce(sumMoney, 0);
+// reduce(func, start) 
 
 function whoMost() {
   let max, min;
@@ -133,26 +102,26 @@ function showMenu() {
 showMenu();
 
 console.log('=== Show user ===');
-showUsers();
+showUsers(users);
 
 console.log('=== Add user ===');
-addUsers(5, "Viet Van", 19, "male", 50);
+addUsers(user);
 
 console.log('=== Xoa nguoi dung theo id ===');
-delUsers(1);
+console.log(deleteUsers(3));
 
-console.log('=== Cập nhật thông tin ngưỜi dùng theo id ===');
-updateUsers(3);
+console.log('=== Cap nhat thong tin nguoi dung theo id ===');
+console.log(updateUsers(5, {age: 19, money: 183}));
 
-console.log('=== Đếm số nam ===');
-console.log('Có ' + cntMale() + ' user nam');
+const cnt = statUsers(users);
+console.log('=== Đem so nam ===');
+console.log('Có ' + cnt.male + ' user nam');
 
 console.log('=== Đếm số người có tuổi lớn hơn 15 tuổi ===');
-console.log('Có ' + moreThan15Age() + ' user > 15 tuoi');
+console.log('Có ' + cnt.teen + ' user > 15 tuoi');
 
-console.log(users)
-console.log('=== Tổng số money ===');
-console.log('Sum = ' + sumMoney());
+console.log('=== Tong so money ===');
+console.log('Sum = ' + totalMoney(users));
 
 whoMost();
 
